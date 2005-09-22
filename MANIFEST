@@ -1,0 +1,8 @@
+Changes
+Makefile.PL
+MANIFEST
+t/IO-Dir-Recursive.t
+t/tests/bar
+t/tests/foo/moo
+lib/IO/Dir/Recursive.pm
+META.yml                                 Module meta-data (added by MakeMaker)
