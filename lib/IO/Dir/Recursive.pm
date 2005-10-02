@@ -9,7 +9,7 @@ use File::Spec;
 
 our @ISA = qw(IO::Dir);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 NAME
 
@@ -54,23 +54,14 @@ sub DIR_NOUPWARDS () { 2 }
 
 =head1 METHODS
 
-=head2 read 
-
- my $item = $dh->read($key);
-
-Returns an item of the $dh structure refered by $key. It return an
-IO::Dir::Recursive instance for direcory items, an IO::All instance for file
-items or undef if there's no item called $key.
-
-=cut
-
-=head1 METHODS
+IO::Dir::Recursive inherits from IO::Dir and therefor inherits all its methods
+with the following exceptions.
 
 =head2 read 
 
- my $next = $dh->read();
+ my $item = $dh->read();
 
-Reads the next item in $dh and returns a coresponding object: an
+Reads the next item in $dh and returns the coresponding object for the item: an
 IO::Dir::Recursive instance for directories, an IO::All instance for files or
 undef if there are no other items left.
 
@@ -158,18 +149,11 @@ sub FETCH {
 
 =head1 SEE ALSO
 
-Mention other useful documentation such as the documentation of
-related modules or operating system documentation (such as man pages
-in UNIX), or any relevant external documentation such as RFCs or
-standards.
-
-If you have a mailing list set up for your module, mention it here.
-
-If you have a web site set up for your module, mention it here.
+L<IO::Dir>, L<IO::All>
 
 =head1 AUTHOR
 
-Florian Ragwitz, E<lt>rafl@debianforum.deE<gt>
+Florian Ragwitz, E<lt>flora@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
