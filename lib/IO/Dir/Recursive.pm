@@ -9,7 +9,7 @@ use File::Spec;
 
 our @ISA = qw(IO::Dir);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 NAME
 
